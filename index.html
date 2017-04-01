@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="bin/bulma.css"/>
+    <title>5 Juz</title>
+<style>
+.modal-card-body p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+a, .buka-modal{text-decoration:underline;}
+.button{text-decoration:none;}
+</style>
+</head>
+<body>
+    
+
+<section class="hero is-success is-fullheight">
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+ <div class="update"></div>
+
+
+
+
+
+
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="subtitle">
+        Hari ini murajaah juz:
+      </h1>
+      <h2 class="title">
+        <span class="tanggal1">1</span> - <span class="tanggal2">5</span>
+      </h2>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+        <p class="has-text-centered">
+<span class="buka-modal">Mengapa harus murajaah 5 juz?</span>
+&bull;
+LINE: mzaini30
+        </p>
+        <br>
+  </div>
+</section>
+
+
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Murajaah</p>
+     <button class="delete"></button>
+    </header>
+    <section class="modal-card-body">
+<p># Murajaah (mengulang) adalah tiang hafalan, siapa yang menelantarkannya, rusaklah hafalannya
+</p><p># Melatih diri untuk bisa istiqamah murajaah lebih penting daripada melatih menambah hafalan baru.
+</p><p> # Orang yang terbiasa tilawah Al Qur'an 1-5 Juz sehari akan lebih terbiasa melakukan murajaah Al Qur'an termasuk saat dalam keadaan sangat jenuh.
+</p><p> # Al Qur'an itu sangat mudah dihafal dan sangat mudah terlepas, tidak perlu upaya keras dalam menghafal. Upaya terbesar adalah menjaganya.
+</p><p> # Orang yang telah dinyatakan lulus hafal 30 Juz bisa tidak hafal satu surat pun bila tidak menjaga hafalannya, bahkan kedudukannya sama seperti orang yang tidak pernah menghafal.
+</p><p> # Melatih diri tilawah Al Qur'an 5 Juz sehari adalah modal terbesar terjaganya hafalan, sebab minimal seseorang perlu mengulang 1/6 dari total hafalannya.
+</p><p><strong> Tingkatan Hafalan :
+</strong></p><p> # Tingkatan pertama, hafal dengan pikirannya. Dia benar-benar sadar dengan apa yang dibacanya sebab baru saja dia menghafalnya.
+</p><p> # Tingkatan ke dua, hafal dengan lisannya tanpa pikirannya. Hafalan telah masuk alam bawah sadar, inilah hafalan lisan, lisannya dengan mudah mengucapkannya, tetapi saat lupa, pikiran sadarnya sulit memanggil kembali hafalannya karena pikirannya tidak lagi memperhatikan setiap yang dibacanya. Inilah masa kritis, pada masa ini banyak penghapal – termasuk penulis – merasa bahwa hapalannya rusak, padahal itulah fase masuk tahapan ke tiga, mutqin (kokoh) dalam hafalannya.
+</p><p> # Tingkatan ke tiga, hafal dengan pikirannya dan lisannya, pikiran sadar kembali memanggil hafalan yang masuk ke alam bawah sadar pada puncak kesadaran sehingga saat lisannya mengucapkannya pikirannya pun mampu mengikutinya, fase ini dilalui dengan proses melatih kembali hafalan yang masuk ke dalam alam bawah sadar kita dengan banyak mengulang bagian-bagian yang lupa-lupa atau terputus lanjutannya. Insya Allah bila sudah seperti ini, hafalan akan kokoh
+</p>    </section>
+    <footer class="modal-card-foot">
+<a href="http://diskusiteras.tumblr.com/post/63737268594/menghafal-al-quran" class="button is-success">Sumber</a>
+    </footer>
+  </div>
+</div>
+
+
+<script src="bin/jquery.min.js"></script>
+<script>
+
+
+function waktu(){
+tanggal = new Date()
+sekarang = tanggal.getDate()
+
+grup = sekarang % 6
+if (grup == 0){
+    grup = 6
+}
+grup *= 5
+
+
+$(".tanggal2").html(grup)
+$(".tanggal1").html(grup - 4)
+}
+waktu()
+window.setInterval("waktu()", 3600000)
+
+$(".buka-modal").click(function(){
+    $(".modal").addClass("is-active")
+})
+$(".delete, .modal-background").click(function(){
+    $(".modal").removeClass("is-active")
+})
+</script>
+
+
+        <script>
+            document.writeln("<scr"+"ipt src='http://muhammadzaini.com/update-aplikasi/5juz.js?"+Math.random()+"'></scr"+"ipt>")
+        </script>
+        <script>
+            if(typeof sha != "undefined"){
+                if(sha != "dbdgg"){            	
+                    $(".update").html(" <section class='hero is-danger'>  <div class='hero-body'>     <div class='container'>      <h1 class='title has-text-centered'>         Pembaruan aplikasi tersedia &bull; <a href='http://intip.in/limajuz'>Download sekarang</a>      </h1>  </div> </div></section> ")
+                }
+            }
+        </script>
+
+
+</body>
+</html>
